@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="header01.css">
+</head>
+<body>
+
+<div class="bg"> <!--agrupa el menú-->
+    <div id ="navbar" class="navbar"> <!--clase menú-->
+        <ul>
+            <li>casa</li>
+            <li>roblozx</li>
+            <li>catributos</li>
+            <li>Elemento</li>
+        </ul>
+    </div>
+</div>
+
+<section><!--contenido-->
+    <h2>Contenido de la Página</h2>
+    <p>Scroll hacia abajo y hacia arriba para ver el efecto del header sticky.</p>
+</section>
+
+<script>
+    function changeBg(){ //función con el nombre de changeBg
+        var Scrollvalue = window.scrollY; // se le asigna una la variable que contenga el desplazamiento de la pantalla en y (de arriba abajo)
+        var navbar = document.getElementById("navbar") // se le asigna una variable el cual es igual al elemento navbar en el css
+        if (Scrollvalue < 150){ //si el valor del scroll es menor a 150 entonces hará estos cambios
+            navbar.classList.remove("bgcolor") // quita a la bgcolor en el css el cual tiene todos los cambios
+        }else{
+            navbar.classList.add("bgcolor")// añade bgcolor 
+        }
+    }
+
+    window.addEventListener("scroll", changeBg ) // se indica un listener y se agrega los atributos involucrados 
+</script>
+
+</body>
+</html>
